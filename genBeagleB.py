@@ -56,8 +56,7 @@ def generate_current_round():
     game_sequence.append(current_led)
     for count in range(0,current_round):
         pisca(LEDS[game_sequence[count]],0.5)
-        #vai adicionando a sequencia dos leds na ordem
-        
+        #vai adicionando a sequencia dos leds na ordem     
 
 def get_play():
     #numero de jogadas
@@ -118,12 +117,7 @@ while True:
         #Loop do jogo
         while game_started:
             #O Computador gera uma rodada
-            generate_current_round()
-            
-            #
-            # Desse jeito que tá aqui, ele tá gerando um novo jogo a cada rodada, mas ele precisa repetir o que já foi gerado antes
-            # e gerar apenas um led a mais na sequencia
-            #
+            generate_current_round()    
             
             #Detecta a jogada do jogador
             get_play()
