@@ -44,16 +44,13 @@ def pisca(led,tempo):
     time.sleep(tempo)
 
 def flag():
-    pisca(l0,0.5)
-    pisca(l1,0.5)
-    pisca(l2,0.5)
-    pisca(l3,0.5)
-
+    for led in LEDS:
+        pisca(led,0.5)
+   
 def generate_current_round():
     #Comecando com um led, a cada rodada aumenta um led no jogo gerado
     #for cont in range(0,current_round):
-    current_led = random.randint(0,3)
-    game_sequence.append(current_led)
+    game_sequence.append(random.randint(0,3))
     for count in range(0,current_round):
         pisca(LEDS[game_sequence[count]],0.5)
         #vai adicionando a sequencia dos leds na ordem     
